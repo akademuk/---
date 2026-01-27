@@ -1,0 +1,326 @@
+@media (max-width: 1280px) {
+    :root {
+        /* Layout */
+        --container: 1440px;
+        --section-padding-y: 32px;
+        /* --top-padding, --bottom-padding */
+        --section-padding-x: 32px;
+        /* --padding-left, --padding-right */
+
+        /* Typography Sizes - Content */
+        --text-general-size: 20px;
+        --text-big-size: 25px;
+        --text-small-size: 12px;
+
+        /* Typography Sizes - Headings */
+        --heading-big-size: 65px;
+        /* h1 banner */
+        --heading-general-size: 40px;
+        --heading-small-size: 25px;
+        --heading-exsmall-size: 18px;
+        /* h4-h6 */
+
+        /* Typography Sizes - Decorative */
+        --decorative-big-size: 44px;
+        /* h2 banner */
+        --decorative-general-size: 25px;
+    }
+
+    .header__search-form {
+        display: none;
+    }
+
+    .header__action {
+        margin-left: auto;
+        margin-right: 25px;
+    }
+
+    .hero-blockquote {
+        margin: 64px auto 0 auto;
+        transform: none;
+    }
+
+    .hero-bg-cards {
+        display: none;
+    }
+
+    .about__content {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 64px 0;
+    }
+
+    .about__map {
+        width: 100%;
+        top: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about__box {
+        justify-content: center;
+    }
+
+    .about__map-caption {
+        left: 30%;
+    }
+
+    .about__features {
+        justify-content: center;
+    }
+
+    .contribution {
+        overflow: hidden;
+    }
+
+    .contribution__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .contribution__media {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contribution__container {
+        padding-left: var(--section-padding-x);
+    }
+
+    .international-recognition__map {
+        position: static;
+        height: 550px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        overflow: auto;
+    }
+
+    .international-recognition__header {
+        margin: 0 auto;
+        max-width: 800px;
+        align-items: center;
+    }
+
+    .international-recognition__header p {
+        text-align: center;
+    }
+
+    .international-recognition__map img {
+        object-fit: cover;
+    }
+
+    .international-recognition .container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .product-body__item {
+        width: 288px; /* Fixed width for better scroll experience */
+        flex-shrink: 0;
+    }
+
+    .product-body {
+        overflow-x: auto;
+        padding-bottom: 20px;
+        /* Show scrollbar explicitly */
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-text) #f0f0f0;
+    }
+
+    .product-body::-webkit-scrollbar {
+        height: 8px; /* Visible height */
+    }
+    
+    .product-body::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 4px;
+    }
+    
+    .product-body::-webkit-scrollbar-thumb {
+        background-color: var(--color-text);
+        border-radius: 4px;
+        border: 2px solid #f0f0f0; 
+    }
+
+    .reviews__content {
+        width: calc(100% - 300px);
+    }
+
+    .reviews__img {
+        object-fit: cover;
+    }
+
+    .reviews__media {
+        height: auto;
+    }
+
+    .reviews {
+        padding-bottom: var(--section-padding-y);
+    }
+
+    .product .container {
+        padding-right: 0;
+    }
+
+    .mixology__media-group {
+        display: none;
+    }
+
+    .mixology__media {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .mixology__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .mixology .container {
+        flex-wrap: wrap;
+        gap: 64px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        /* Layout */
+        --container: 1440px;
+        --section-padding-y: 64px;
+        /* --top-padding, --bottom-padding */
+        --section-padding-x: 16px;
+        /* --padding-left, --padding-right */
+
+        /* Typography Sizes - Content */
+        --text-general-size: 16px;
+        --text-big-size: 25px;
+        --text-small-size: 12px;
+
+        /* Typography Sizes - Headings */
+        --heading-big-size: 32px;
+        /* h1 banner */
+        --heading-general-size: 24px;
+        --heading-small-size: 18px;
+        --heading-exsmall-size: 16px;
+        /* h4-h6 */
+
+        /* Typography Sizes - Decorative */
+        --decorative-big-size: 24px;
+        /* h2 banner */
+        --decorative-general-size: 18px;
+    }
+
+    .about__box {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .about__info {
+        align-items: center;
+    }
+
+    .about__info p {
+        text-align: center;
+    }
+
+    .about .container {
+        padding: 0 var(--section-padding-x);
+    }
+
+    .about__features {
+        flex-wrap: wrap;
+    }
+
+    .about__icon-animation {
+        right: 0;
+    }
+
+    .about__info .font-heading {
+        text-align: center;
+    }
+
+    .about__map {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+    }
+
+    .about__map>img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .about {
+        overflow: hidden;
+    }
+
+    .contribution__title {
+        font-size: 32px;
+    }
+
+    .title-row p {
+        font-size: 16px;
+    }
+
+    .international-recognition__header {
+        font-size: 16px;
+    }
+
+    .reviews__content {
+        gap: 32px;
+    }
+
+    .product .container {
+        gap: 32px;
+    }
+
+    .reviews__content {
+        width: 100%;
+    }
+
+    .reviews__container {
+        padding-right: var(--section-padding-x);
+              flex-direction: column;
+    }
+
+    .reviews__media {
+        width: 100%;
+        height: 450px;
+        position: relative;
+    }
+
+    .reviews__img {
+        object-fit: contain;
+        position: absolute;
+        inset: 0;
+        object-position: center bottom; 
+    }
+
+    .review-card {
+        padding: 0 0 16px 0;
+    }
+
+    .reviews__pagination {
+        margin-left: 0;
+    }
+
+    .reviews {
+        padding-bottom: 0;
+    }
+
+    .mixology {
+        padding: var(--section-padding-y) 0;
+    }
+
+    .mixology__content {
+        max-width: 450px;
+        flex: 1;
+    }
+}

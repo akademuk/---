@@ -1,0 +1,366 @@
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('../fonts/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mazzard Soft L';
+    src: url('../fonts/MazzardSoftL-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mistral';
+    src: url('../fonts/Mistral.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  /* Layout */
+  --container: 1440px;
+  --section-padding-y: 120px; /* --top-padding, --bottom-padding */
+  --section-padding-x: 120px; /* --padding-left, --padding-right */
+
+  /* Colors */
+  --color-white: #fff;
+  --color-text: #47423E;
+  --color-bg: #F6E4C0;
+  --color-body: #FFFDF2;
+
+  /* Fonts */
+  --text-font: 'Mazzard Soft L', sans-serif;
+  --heading-font: 'Cormorant Garamond', serif;
+  --decorative-font: 'Great Vibes', cursive;
+
+  /* Typography Sizes - Content */
+  --text-general-size: 20px;
+  --text-big-size: 25px;
+  --text-small-size: 12px;
+  
+  /* Typography Sizes - Headings */
+  --heading-big-size: 65px;     /* h1 banner */
+  --heading-general-size: 40px; 
+  --heading-small-size: 25px;
+  --heading-exsmall-size: 18px; /* h4-h6 */
+
+  /* Typography Sizes - Decorative */
+  --decorative-big-size: 44px;  /* h2 banner */
+  --decorative-general-size: 25px;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+body {
+  font-family: var(--text-font);
+  font-size: var(--text-general-size);
+  line-height: 1.2;
+  color: var(--color-text);
+  background: var(--color-body);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+}
+
+/* ==========================================================================
+   Typography Utilities
+   ========================================================================== */
+.font-text { font-family: var(--text-font); }
+.font-heading { font-family: var(--heading-font); }
+.font-decorative { font-family: var(--decorative-font); }
+
+/* Headings Sizes */
+.heading-big { font-size: var(--heading-big-size); }         /* 65px */
+.heading-general { font-size: var(--heading-general-size); } /* 40px */
+.heading-small { font-size: var(--heading-small-size); }     /* 25px */
+.heading-exsmall { font-size: var(--heading-exsmall-size); } /* 18px */
+
+/* Decorative Sizes */
+.decorative-big { font-size: var(--decorative-big-size); }         /* 44px */
+.decorative-general { font-size: var(--decorative-general-size); } /* 25px */
+
+/* Text Sizes */
+.text-big { font-size: var(--text-big-size); }
+.text-small { font-size: var(--text-small-size); }
+
+/* Specific Type Components */
+.nav-link {
+  font-family: var(--heading-font);
+  font-weight: 600; /* Semibold */
+  font-size: 15px;
+}
+
+.nav-link-sub {
+  font-family: var(--heading-font);
+  font-weight: 600; /* Semibold */
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 0.9em; 
+  font-weight: 500;
+  font-family: var(--text-font);
+  font-size: 22px;
+  text-decoration: none;
+  border: none;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* White Button (defined as --color-bg in specs) */
+.btn-white {
+    border-radius: 1px;
+    color: var(--color-text);
+    background: var(--color-bg);
+    box-shadow: 1px 1px 4px 0 rgba(71, 66, 62, 0.24);
+}
+.btn-white:hover {
+  opacity: 0.9;
+}
+
+/* Transparent Button */
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+.btn-transparent:hover {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+/* Dark Button */
+.btn-dark {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+.btn-dark:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   WYSIWYG / Editor Content
+   ========================================================================== */
+.editor-elements p {
+  margin-bottom: 1.2em;
+}
+
+.editor-elements h2,
+.editor-elements h3 {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  font-family: var(--heading-font);
+}
+
+.editor-elements ul,
+.editor-elements ol {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  list-style-position: inside;
+}
+
+.editor-elements ul li,
+.editor-elements ol li {
+  margin-bottom: 0.8em;
+}
