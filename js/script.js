@@ -75,6 +75,20 @@ function initMobileNav() {
   });
 }
 
+function initFooterNav() {
+  const heads = document.querySelectorAll('.footer__nav-head');
+
+  heads.forEach(head => {
+    head.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parent = this.closest('.footer__nav-item');
+        if (parent) {
+            parent.classList.toggle('is-open');
+        }
+    });
+  });
+}
+
 function initLangSwitcher() {
     const langBtn = document.querySelector('.header__lang-btn');
     const langContainer = document.querySelector('.header__lang');
@@ -167,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initBurger();
   initMobileNav();
+  initFooterNav();
   initLangSwitcher();
   initAwards();
   initReviews();

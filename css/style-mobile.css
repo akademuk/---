@@ -3,26 +3,23 @@
         /* Layout */
         --container: 1440px;
         --section-padding-y: 32px;
-        /* --top-padding, --bottom-padding */
         --section-padding-x: 32px;
-        /* --padding-left, --padding-right */
 
-        /* Typography Sizes - Content */
+        /* Typography Sizes - Text */
         --text-general-size: 20px;
         --text-big-size: 25px;
+        --text-secondary-size: 15px;
         --text-small-size: 12px;
 
         /* Typography Sizes - Headings */
         --heading-big-size: 65px;
-        /* h1 banner */
+        --heading-medium-size: 48px;
         --heading-general-size: 40px;
         --heading-small-size: 25px;
         --heading-exsmall-size: 18px;
-        /* h4-h6 */
 
         /* Typography Sizes - Decorative */
         --decorative-big-size: 44px;
-        /* h2 banner */
         --decorative-general-size: 25px;
     }
 
@@ -188,6 +185,53 @@
         gap: 64px;
         justify-content: space-between;
     }
+
+    
+    .blog-card {
+       width: calc(50% - 12px); 
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .footer__top {
+        flex-wrap: wrap;
+    }
+
+    .footer__col--subscribe {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer__col--info {
+        align-items: center;
+    }
+
+    .footer__logo-wrapper {
+        align-items: center;
+    }
+
+    .footer__contacts {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__nav-group {
+        align-items: center;
+    }
+
+    .footer__col--subscribe {
+        align-items: center;
+    }
+
+    .footer__col--subscribe .footer__title {
+        text-align: center;
+    }
+
+    .footer__nav-list {
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -195,26 +239,23 @@
         /* Layout */
         --container: 1440px;
         --section-padding-y: 64px;
-        /* --top-padding, --bottom-padding */
         --section-padding-x: 16px;
-        /* --padding-left, --padding-right */
 
-        /* Typography Sizes - Content */
+        /* Typography Sizes - Text */
         --text-general-size: 16px;
         --text-big-size: 25px;
+        --text-secondary-size: 14px;
         --text-small-size: 12px;
 
         /* Typography Sizes - Headings */
         --heading-big-size: 32px;
-        /* h1 banner */
+        --heading-medium-size: 32px;
         --heading-general-size: 24px;
         --heading-small-size: 18px;
         --heading-exsmall-size: 16px;
-        /* h4-h6 */
 
         /* Typography Sizes - Decorative */
         --decorative-big-size: 24px;
-        /* h2 banner */
         --decorative-general-size: 18px;
     }
 
@@ -262,15 +303,15 @@
     }
 
     .contribution__title {
-        font-size: 32px;
+        font-size: var(--heading-medium-size);
     }
 
     .title-row p {
-        font-size: 16px;
+        font-size: var(--text-general-size);
     }
 
     .international-recognition__header {
-        font-size: 16px;
+        font-size: var(--text-general-size);
     }
 
     .reviews__content {
@@ -323,4 +364,20 @@
         max-width: 450px;
         flex: 1;
     }
+
+    .footer__legal {
+        width: 100%;
+        min-width: 100%;
+                justify-content: center;    
+                gap: 16px;
+    }
+
+    .footer__bottom {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+.footer__developer {
+    margin-left: 0;
+}
 }
