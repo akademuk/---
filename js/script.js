@@ -1,15 +1,28 @@
 // Initialize Lenis
-const lenis = new Lenis();
+// Check if browser is Safari
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-function raf(time) {
-  lenis.raf(time);
+if (!isSafari) {
+  const lenis = new Lenis({
+    lerp: 0.1,
+    smoothWheel: true,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
+} else {
+  // Optional: Add a class for CSS adjustments if needed
+  document.documentElement.classList.add('is-safari');
 }
 
-requestAnimationFrame(raf);
-
 // Initialize AOS
-AOS.init();
+AOS.init({
+  once: true,
+});
 
 /* ==========================================================================
    Navigation Menu Script
@@ -128,19 +141,32 @@ function initLangSwitcher() {
 }
 
 function initAwards() {
-  const awardsSwipers = new Swiper('.awards__swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    // Marquee effect settings
-    speed: 5000, // Adjust for speed (higher = slower)
-    // freeMode: true, 
-    // freeModeMomentum: false,
-    // autoplay: {
-    //     delay: 0,
-    //     disableOnInteraction: false,
-    //     pauseOnMouseEnter: true
-    // },
+  const swiperContainers = document.querySelectorAll('.awards__swiper');
+
+  swiperContainers.forEach(container => {
+    new Swiper(container, {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: false,
+      speed: 800,
+      navigation: {
+          nextEl: container.querySelector('.awards__nav-next'),
+          prevEl: container.querySelector('.awards__nav-prev'),
+      },
+      breakpoints: {
+          768: {
+              slidesPerView: 3,
+          },
+          1024: {
+              slidesPerView: 4,
+          },
+          1280: {
+              slidesPerView: 6,
+          }
+      },
+      observer: true,
+      observeParents: true,
+    });
   });
 
   // 2. Tabs Logic
@@ -176,6 +202,66 @@ function initReviews() {
   });
 }
 
+function initTeamSlider() {
+    const sliderSelector = '.team__body'; 
+    const teamSliderCheck = document.querySelector(sliderSelector);
+    
+    if (!teamSliderCheck) return;
+
+    let teamSwiper;
+    
+    function handleResize() {
+        if (window.innerWidth < 992) {
+            if (!teamSwiper || teamSwiper.destroyed) {
+                teamSwiper = new Swiper(teamSliderCheck, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                        nextEl: teamSliderCheck.querySelector('.team__nav-next'),
+                        prevEl: teamSliderCheck.querySelector('.team__nav-prev'),
+                    },
+                });
+            }
+        } else {
+            if (teamSwiper && !teamSwiper.destroyed) {
+                teamSwiper.destroy(true, true);
+            }
+        }
+    }
+
+    // Initial check
+    handleResize();
+
+    // Listen for resize
+    window.addEventListener('resize', handleResize);
+}
+
+function initMaterialsProductSlider() {
+    const slider = document.querySelector('.materials-product-swiper');
+    
+    if (slider) {
+        new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            navigation: {
+                nextEl: '.materials-product__slide-next',
+                prevEl: '.materials-product__slide-prev',
+            },
+        });
+    }
+}
+
+function initFancybox() {
+    if (typeof Fancybox !== 'undefined') {
+        Fancybox.bind("[data-fancybox]", {
+            // Custom options if needed
+        });
+    }
+}
+
 // Call scripts
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
@@ -185,4 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLangSwitcher();
   initAwards();
   initReviews();
+  initTeamSlider();
+  initMaterialsProductSlider();
+  initFancybox();
 });
