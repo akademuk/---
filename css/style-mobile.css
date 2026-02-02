@@ -180,9 +180,12 @@
         justify-content: space-between;
     }
 
-
     .blog-card {
         width: calc(50% - 12px);
+    }
+
+    .cycle-icon {
+        display: none;
     }
 
 }
@@ -370,6 +373,53 @@
 
 .materials__list {
     margin-left: 0;
+}
+
+.materials-product__slide-image {
+    width: 350px;
+    height: 350px;
+}
+
+.materials-product__slide-content {
+    max-width: calc(100% - 64px - 350px);
+}
+
+.apiary__container {
+    flex-direction: column-reverse;
+}
+
+.apiary__content {
+    max-width: 100%;
+}
+
+.apiary__map-box {
+    margin: 0 auto;
+}
+
+.apiary__left {
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.apiary__animation {
+    top: -70px;
+    left: 32%;
+}
+
+.cycle__content {
+    max-width: 100%;
+}
+
+.cycle__media {
+    display: none;
+}
+
+.cycle__item {
+    flex: 1 1 calc(50% - 12px);
+}
+
+.production-technologies__item {
+    flex: 1 1 calc(50% - 12px);
 }
 }
 
@@ -603,11 +653,83 @@
         flex: 1;
         min-width: 200px;
     }
+
+    .materials-product__slide-item {
+        flex-direction: column;
+    }
+
+    .materials-product__slide-image {
+        width: 100%;
+    }
+
+    .materials-product__slide-content {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .apiary__location-item {
+        flex-wrap: wrap;
+    }
+
+    .cycle__title strong {
+        display: inline;
+    }
+
+    .achievements__list-item {
+        flex-direction: column;
+        padding-left: 40px;
+        position: relative;
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    .achievements__list-item:nth-last-of-type(2n) {
+        flex-direction: column-reverse;
+    }
+
+    .achievements__list-item:nth-last-of-type(1) {
+        padding-bottom: 0;
+    }
+
+   .achievements__list-item .achievements__list-line::before {
+    top: 15%;
+   }
+
+    .achievements__list-content {
+        max-width: 100%;
+    }
+
+    .achievements__list-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .achievements__list-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+    }
+
+    .achievements__list-line::before {
+    content: "";
+    left: 0;
+    right: auto;
+    }
     
 }
 
 @media (max-width: 576px) {
     .gallery__item {
         max-width: 100%;
+    }
+
+    .cycle__item {
+        flex: 1 1 100%;
+    }
+
+    .production-technologies__item  {
+        flex: 1 1 100%;
     }
 }
