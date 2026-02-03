@@ -254,6 +254,49 @@ function initMaterialsProductSlider() {
     }
 }
 
+function initMixologyTabs() {
+    const tabs = document.querySelectorAll('.mixology-page__tab');
+    const cards = document.querySelectorAll('.mixology-page__card');
+    
+    if (!tabs.length || !cards.length) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const filterValue = tab.getAttribute('data-filter');
+            
+            // 1. Update Tabs UI
+            tabs.forEach(t => {
+                t.classList.remove('mixology-page__tab--active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            
+            tab.classList.add('mixology-page__tab--active');
+            tab.setAttribute('aria-selected', 'true');
+
+            // 2. Filter Cards
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                // If filter is 'all' or matches the category
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = ''; // Reset display to CSS default (block/flex/grid)
+                    
+                    // Add a small fade-in effect via global class if desired, or just show
+                    // Using a small timeout to allow display change to register before opacity transition if we had CSS for it
+                    // For now, just direct show/hide
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Refresh AOS or other layout libraries if present
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        });
+    });
+}
+
 function initFancybox() {
     if (typeof Fancybox !== 'undefined') {
         Fancybox.bind("[data-fancybox]", {
@@ -273,5 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initReviews();
   initTeamSlider();
   initMaterialsProductSlider();
+  initMixologyTabs();
   initFancybox();
 });

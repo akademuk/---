@@ -34,11 +34,11 @@
         flex-direction: column-reverse;
         gap: 64px;
     }
-    
+
     .philosophy__quote {
         margin-left: 32px;
     }
-    
+
 
     .about {
         padding: 64px 0;
@@ -188,6 +188,17 @@
         display: none;
     }
 
+    .recipe-card__body {
+        flex-direction: column;
+    }
+
+    .recipe-card__main {
+        max-width: 100%;
+    }
+
+    .recipe-card__sidebar {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -246,11 +257,11 @@
     }
 
     .history-about__media {
-       margin: 0 auto;
-       max-width: 384px;
-       width: 100%;
+        margin: 0 auto;
+        max-width: 384px;
+        width: 100%;
     }
-    
+
     .muse .container {
         flex-direction: column;
         gap: 32px;
@@ -310,7 +321,7 @@
         overflow: visible;
     }
 
-     .team__nav-btn {
+    .team__nav-btn {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -332,7 +343,7 @@
         z-index: 10;
     }
 
-    
+
     .team__nav-prev img {
         transform: rotate(180deg);
     }
@@ -350,7 +361,7 @@
     }
 
     .about-production__content-item {
-       flex: 1;
+        flex: 1;
     }
 
     .about-production__content {
@@ -358,69 +369,69 @@
     }
 
     .materials__top {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding-right: 310px;
-}
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-right: 310px;
+    }
 
-.materials__media {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+    .materials__media {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-.materials__list {
-    margin-left: 0;
-}
+    .materials__list {
+        margin-left: 0;
+    }
 
-.materials-product__slide-image {
-    width: 350px;
-    height: 350px;
-}
+    .materials-product__slide-image {
+        width: 350px;
+        height: 350px;
+    }
 
-.materials-product__slide-content {
-    max-width: calc(100% - 64px - 350px);
-}
+    .materials-product__slide-content {
+        max-width: calc(100% - 64px - 350px);
+    }
 
-.apiary__container {
-    flex-direction: column-reverse;
-}
+    .apiary__container {
+        flex-direction: column-reverse;
+    }
 
-.apiary__content {
-    max-width: 100%;
-}
+    .apiary__content {
+        max-width: 100%;
+    }
 
-.apiary__map-box {
-    margin: 0 auto;
-}
+    .apiary__map-box {
+        margin: 0 auto;
+    }
 
-.apiary__left {
-    margin: 0 auto;
-    flex-direction: row;
-}
+    .apiary__left {
+        margin: 0 auto;
+        flex-direction: row;
+    }
 
-.apiary__animation {
-    top: -70px;
-    left: 32%;
-}
+    .apiary__animation {
+        top: -70px;
+        left: 32%;
+    }
 
-.cycle__content {
-    max-width: 100%;
-}
+    .cycle__content {
+        max-width: 100%;
+    }
 
-.cycle__media {
-    display: none;
-}
+    .cycle__media {
+        display: none;
+    }
 
-.cycle__item {
-    flex: 1 1 calc(50% - 12px);
-}
+    .cycle__item {
+        flex: 1 1 calc(50% - 12px);
+    }
 
-.production-technologies__item {
-    flex: 1 1 calc(50% - 12px);
-}
+    .production-technologies__item {
+        flex: 1 1 calc(50% - 12px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -594,9 +605,9 @@
         width: 100%;
     }
 
-     .history-about__content  {
+    .history-about__content {
         gap: 24px;
-     }
+    }
 
     .muse__content {
         gap: 24px;
@@ -691,9 +702,9 @@
         padding-bottom: 0;
     }
 
-   .achievements__list-item .achievements__list-line::before {
-    top: 15%;
-   }
+    .achievements__list-item .achievements__list-line::before {
+        top: 15%;
+    }
 
     .achievements__list-content {
         max-width: 100%;
@@ -712,12 +723,36 @@
         height: 100%;
     }
 
-    .achievements__list-line::before {
-    content: "";
-    left: 0;
-    right: auto;
+    .recipe-card__image-wrapper {
+        position: relative;
     }
-    
+
+    .recipe-card__image-wrapper img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .achievements__list-line::before {
+        content: "";
+        left: 0;
+        right: auto;
+    }
+
+    .recipe-card__image-wrapper {
+        width: 100%;
+    }
+
+    .mixology-page__tabs {
+        flex-wrap: wrap;
+    }
+
+    .recipe-card {
+        flex-direction: column;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -729,7 +764,7 @@
         flex: 1 1 100%;
     }
 
-    .production-technologies__item  {
+    .production-technologies__item {
         flex: 1 1 100%;
     }
 }

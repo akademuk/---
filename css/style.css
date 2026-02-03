@@ -104,9 +104,45 @@ body {
 }
 
 
-.header--white .burger-line {
-    background-color: var(--color-white);
+
+.header--black .header__nav-link {
+    color: var(--color-text);
 }
+
+.header--black .menu-arrow {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
+}
+
+.header--black .header__basket img {
+      filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
+}
+
+.header--black .header__lang-btn {
+    color: var(--color-text);
+}
+
+.header--black .header__contact-btn img{
+    filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
+}
+
+.header--black .header__logo img {
+    content: url("../img/icons/logo-black.png");
+}
+
+.header--black .header__search-input {
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-text);
+}
+
+
+.header--black .burger-line {
+    background-color: var(--color-text);
+}
+
+.header--black {
+    color: var(--color-text);
+}
+
 
 * {
     box-sizing: border-box;
@@ -234,7 +270,6 @@ body {
     opacity: 0.9;
 }
 
-
 .btn-transparent {
     background-color: transparent;
     border: 1px solid var(--color-white);
@@ -304,6 +339,10 @@ body {
     line-height: normal;
 }
 
+.breadcrumbs--black .breadcrumbs__current {
+    color: var(--color-text);
+}
+
 .breadcrumbs__link {
     display: flex;
     align-items: center;
@@ -316,10 +355,18 @@ body {
     text-decoration: none;
 }
 
+.breadcrumbs--black .breadcrumbs__link {
+    color: var(--color-text);
+}
+
 .breadcrumbs__link::after {
     content: "›";
     font-size: 30px;
     color: var(--color-white);
+}
+
+.breadcrumbs--black .breadcrumbs__link::after {
+    color: var(--color-text);
 }
 
 /* ==========================================================================
@@ -512,6 +559,36 @@ body.no-scroll .header__action {
     .header__nav {
         display: none;
     }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.pagination__link {
+    color: var(--color-text);
+    font-size: var(--text-small-size);
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+    padding: 2px 5px;
+}
+
+.pagination__link.is-active {
+    border-radius: 1px;
+    background: #47423E;
+    color: var(--color-white);
+    text-decoration: underline;
 }
 
 
@@ -3558,4 +3635,230 @@ p {
 
 .product--production {
     padding-bottom: 140px;
+}
+
+.mixology-page {
+    padding-top: 165px;
+    padding-bottom: var(--section-padding-y);
+}
+
+.mixology-page__header {
+    margin-top: 23px;
+    margin-bottom: 41px;
+}
+
+.mixology-page__header h1 {
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.mixology-page__body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mixology-page__tabs {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.mixology-page__tab {
+    background: transparent;
+    border: none;
+    display: flex;
+    min-width: 180px;
+    padding: 15px 20px 15px 0;
+    border-bottom: 1px solid #E6E8EA;
+    font-size: var(--heading-exsmall-size);
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mixology-page__tab:hover {
+    border-bottom-color: #47423E;
+}
+
+.mixology-page__tab.mixology-page__tab--active {
+    font-weight: 500;
+    border-bottom: 1px solid #47423E;
+}
+
+.mixology-page__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.recipe-card {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #E6E8EA;
+}
+
+.recipe-card:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.recipe-card__image-wrapper {
+    width: 282px;
+    height: 376px;
+    aspect-ratio: 3/4;
+    flex-shrink: 0;
+}
+
+.recipe-card__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-card__body {
+    max-width: 792px;
+    width: 100%;
+    gap: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.recipe-card__main {
+    max-width: 384px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.recipe-card__sidebar {
+    max-width: calc(100% - 384px - 24px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.recipe-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.recipe-card__title {
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.recipe-card__section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recipe-card__subtitle {
+    font-size: var(--text-small-size);
+    font-weight: 300;
+    line-height: normal;
+}
+
+.recipe-card__ingredients-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recipe-card__ingredients-list li {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-secondary-size);
+    line-height: normal;
+    gap: 8px;
+}
+
+.recipe-card__steps-list {
+    margin: 0;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recipe-card__steps-list li {
+    font-size: var(--text-secondary-size);
+    line-height: normal;
+}
+
+.recipe-author {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.recipe-author__avatar {
+    width: 78px;
+    height: 78px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+}
+
+.recipe-author__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-author__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recipe-author__info span {
+    font-size: var(--text-secondary-size);
+    font-weight: 400;
+    line-height: normal;
+}
+
+.recipe-author__info .recipe-author__name {
+    font-size: var(--text-small-size);
+    font-weight: 300;
+    line-height: normal;
+}
+
+.recipe-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.recipe-card__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 112px;
+}
+
+.recipe-card__meta-term {
+    font-size: var(--text-small-size);
+    font-weight: 300;
+    line-height: normal;
+}
+
+.recipe-card__meta-desc {
+    font-size: var(--text-secondary-size);
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mixology-page__header p {
+    max-width: 588px;
 }

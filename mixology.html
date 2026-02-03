@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хані Баджер - Міксологія</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+</head>
+
+<body>
+    <header class="header header--black">
+        <div class="container header__container">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link">Каталог</a>
+                        <ul class="header__sub-list">
+                            <li class="header__sub-item">
+                                <a href="#" class="header__sub-link">Напої</a>
+                                <ul class="header__sub-list">
+                                    <li class="header__sub-item"><a href="#" class="header__sub-link">Настоянки</a></li>
+                                    <li class="header__sub-item"><a href="#" class="header__sub-link">Наливки</a></li>
+                                    <li class="header__sub-item"><a href="#" class="header__sub-link">Джин</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__sub-item">
+                                <a href="#" class="header__sub-link">Гурме</a>
+                            </li>
+                            <li class="header__sub-item">
+                                <a href="#" class="header__sub-link">Мерч</a>
+                            </li>
+                            <li class="header__sub-item">
+                                <a href="#" class="header__sub-link">Набори</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Наша історія</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Новини</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакти</a></li>
+                </ul>
+            </nav>
+            <a href="/" class="header__logo">
+                <img src="img/logo.png" alt="Хані Баджер Логотип">
+            </a>
+            <div class="header__action">
+                <form class="header__search-form">
+                    <input class="header__search-input" type="search" placeholder="Пошук..." aria-label="Пошук">
+                    <button class="header__contact-btn" type="button">
+                        <img src="img/search.svg" width="20" height="20" alt="Пошук" aria-hidden="true">
+                    </button>
+                </form>
+                <a href="#" class="header__basket" aria-label="Кошик">
+                    <img src="img/basket.svg" alt="" aria-hidden="true">
+                    <span class="header__basket-count">0</span>
+                </a>
+                <div class="header__lang">
+                    <button class="header__lang-btn" type="button">UA</button>
+                    <ul class="header__lang-dropdown">
+                        <li><a href="#" class="header__lang-option active">UA</a></li>
+                        <li><a href="#" class="header__lang-option">EN</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Burger Button -->
+            <button class="burger-btn" type="button" aria-label="Меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="mixology-page">
+            <div class="container">
+                <nav class="breadcrumbs breadcrumbs--black" aria-label="Хлібні крихти">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Головна Хані Баджер</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__current" aria-current="page">Міксологія</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div class="mixology-page__header title-row" data-aos="fade-down" data-aos-duration="1000">
+                    <h1 class="heading-big font-heading">Міксологія</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur. Id non sapien nulla potenti malesuada in nunc ornare nam. Integer posuere iaculis turpis massa. Orci tellus odio gravida sit montes ac et. Hendrerit consequat vel ullamcorper nascetur fringilla.<p>
+                </div>
+
+                <div class="mixology-page__body">
+                    <div class="mixology-page__tabs" role="tablist" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <button class="mixology-page__tab mixology-page__tab--active" type="button" role="tab" aria-selected="true" data-filter="all">Всі рецепти</button>
+                        <button class="mixology-page__tab" type="button" role="tab" aria-selected="false" data-filter="gin">Джин</button>
+                        <button class="mixology-page__tab" type="button" role="tab" aria-selected="false" data-filter="tincture">Настоянки</button>
+                        <button class="mixology-page__tab" type="button" role="tab" aria-selected="false" data-filter="liqueur">Наливки</button>
+                    </div>
+
+                    <div class="mixology-page__content">
+                        <article class="recipe-card mixology-page__card" data-category="liqueur" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image1.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Cherry & Tonic</h2>
+                                        <p class="recipe-card__desc">Вишневий, насичений, тонізуючий.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Вишнева домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Тонік</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Склянку для червоного вина доверху заповнити льодом.</li>
+                                            <li>Залити Наливку Вишневу Хані Баджер, потім додати тонік, перемішати.</li>
+                                            <li>Прикрасити вишнею на шпажці.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Авторка</span>
+                                            <h4 class="recipe-author__name">
+                                                Юлія Каленська — засновниця та ідеологиня концепції українських настоянок та наливок ТМ «Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Винний келих</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Вишня</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="liqueur" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image2.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Currant Highball</h2>
+                                        <p class="recipe-card__desc">Легкий, освіжаючий коктейль.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Noel Ginger Ale</li>
+                                            <li><span class="recipe-card__measure">3 шт</span> — Слайси імбиру</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Готується в посуді подачі.</li>
+                                            <li>Охолоджуємо високу склянку, мадлимо три слайси імбиру, додаємо лід та всі інгредієнти.</li>
+                                            <li>Прикрашаємо цукатом імбиру.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar2.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Артем Скубенко — ідейний натхненник та співзасновник ТМ«Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Хайбол</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Імбирний цукат</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="liqueur">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image3.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">5 Points</h2>
+                                        <p class="recipe-card__desc">Коктейль в стилі “sour”.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">50 мл</span> — Настоянка На Бджолах Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">30 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">3 барні ложки</span> — Джем з чорної смородини</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Цукровий сироп</li>
+                                            <li><span class="recipe-card__measure">25 мл</span> — Фреш лимона</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Пастеризований білок</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Для початку охолоджуємо склянку</li>
+                                            <li>Додаємо всі інгредієнти до шейкеру, збиваємо міксером</li>
+                                            <li>Додаємо лід та робимо шейк</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar3.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Роман Теліга — бар-менеджер готелю Алофт, мережа Мерріотт. Восьмирічний досвід роботи в міжнародних готелях за кордоном і в Україні
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Шейк</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Old Fashioned</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Біттер ангустура (декор та ароматизатор) —4 краплі</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="tincture">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image1.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Cherry & Tonic</h2>
+                                        <p class="recipe-card__desc">Вишневий, насичений, тонізуючий.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Вишнева домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Тонік</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Склянку для червоного вина доверху заповнити льодом.</li>
+                                            <li>Залити Наливку Вишневу Хані Баджер, потім додати тонік, перемішати.</li>
+                                            <li>Прикрасити вишнею на шпажці.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Авторка</span>
+                                            <h4 class="recipe-author__name">
+                                                Юлія Каленська — засновниця та ідеологиня концепції українських настоянок та наливок ТМ «Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Винний келих</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Вишня</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="tincture">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image2.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Currant Highball</h2>
+                                        <p class="recipe-card__desc">Легкий, освіжаючий коктейль.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Noel Ginger Ale</li>
+                                            <li><span class="recipe-card__measure">3 шт</span> — Слайси імбиру</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Готується в посуді подачі.</li>
+                                            <li>Охолоджуємо високу склянку, мадлимо три слайси імбиру, додаємо лід та всі інгредієнти.</li>
+                                            <li>Прикрашаємо цукатом імбиру.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar2.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Артем Скубенко — ідейний натхненник та співзасновник ТМ«Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Хайбол</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Імбирний цукат</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="tincture">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image3.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">5 Points</h2>
+                                        <p class="recipe-card__desc">Коктейль в стилі “sour”.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">50 мл</span> — Настоянка На Бджолах Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">30 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">3 барні ложки</span> — Джем з чорної смородини</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Цукровий сироп</li>
+                                            <li><span class="recipe-card__measure">25 мл</span> — Фреш лимона</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Пастеризований білок</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Для початку охолоджуємо склянку</li>
+                                            <li>Додаємо всі інгредієнти до шейкеру, збиваємо міксером</li>
+                                            <li>Додаємо лід та робимо шейк</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar3.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Роман Теліга — бар-менеджер готелю Алофт, мережа Мерріотт. Восьмирічний досвід роботи в міжнародних готелях за кордоном і в Україні
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Шейк</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Old Fashioned</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Біттер ангустура (декор та ароматизатор) —4 краплі</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="tincture">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image1.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Cherry & Tonic</h2>
+                                        <p class="recipe-card__desc">Вишневий, насичений, тонізуючий.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Вишнева домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Тонік</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Склянку для червоного вина доверху заповнити льодом.</li>
+                                            <li>Залити Наливку Вишневу Хані Баджер, потім додати тонік, перемішати.</li>
+                                            <li>Прикрасити вишнею на шпажці.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Авторка</span>
+                                            <h4 class="recipe-author__name">
+                                                Юлія Каленська — засновниця та ідеологиня концепції українських настоянок та наливок ТМ «Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Винний келих</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Вишня</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="tincture">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image2.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Currant Highball</h2>
+                                        <p class="recipe-card__desc">Легкий, освіжаючий коктейль.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Noel Ginger Ale</li>
+                                            <li><span class="recipe-card__measure">3 шт</span> — Слайси імбиру</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Готується в посуді подачі.</li>
+                                            <li>Охолоджуємо високу склянку, мадлимо три слайси імбиру, додаємо лід та всі інгредієнти.</li>
+                                            <li>Прикрашаємо цукатом імбиру.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar2.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Артем Скубенко — ідейний натхненник та співзасновник ТМ«Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Хайбол</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Імбирний цукат</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="gin">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image3.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">5 Points</h2>
+                                        <p class="recipe-card__desc">Коктейль в стилі “sour”.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">50 мл</span> — Настоянка На Бджолах Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">30 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">3 барні ложки</span> — Джем з чорної смородини</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Цукровий сироп</li>
+                                            <li><span class="recipe-card__measure">25 мл</span> — Фреш лимона</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Пастеризований білок</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Для початку охолоджуємо склянку</li>
+                                            <li>Додаємо всі інгредієнти до шейкеру, збиваємо міксером</li>
+                                            <li>Додаємо лід та робимо шейк</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar3.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Роман Теліга — бар-менеджер готелю Алофт, мережа Мерріотт. Восьмирічний досвід роботи в міжнародних готелях за кордоном і в Україні
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Шейк</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Old Fashioned</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Біттер ангустура (декор та ароматизатор) —4 краплі</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="gin">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image1.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Cherry & Tonic</h2>
+                                        <p class="recipe-card__desc">Вишневий, насичений, тонізуючий.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Вишнева домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Тонік</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Склянку для червоного вина доверху заповнити льодом.</li>
+                                            <li>Залити Наливку Вишневу Хані Баджер, потім додати тонік, перемішати.</li>
+                                            <li>Прикрасити вишнею на шпажці.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Авторка</span>
+                                            <h4 class="recipe-author__name">
+                                                Юлія Каленська — засновниця та ідеологиня концепції українських настоянок та наливок ТМ «Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Винний келих</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Вишня</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="gin">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image2.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">Currant Highball</h2>
+                                        <p class="recipe-card__desc">Легкий, освіжаючий коктейль.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">60 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">150 мл</span> — Noel Ginger Ale</li>
+                                            <li><span class="recipe-card__measure">3 шт</span> — Слайси імбиру</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Готується в посуді подачі.</li>
+                                            <li>Охолоджуємо високу склянку, мадлимо три слайси імбиру, додаємо лід та всі інгредієнти.</li>
+                                            <li>Прикрашаємо цукатом імбиру.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar2.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Артем Скубенко — ідейний натхненник та співзасновник ТМ«Хані Баджер».
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Білд</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Хайбол</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Імбирний цукат</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="recipe-card mixology-page__card" data-category="liqueur">
+                            <div class="recipe-card__image-wrapper">
+                                <img src="img/mixology-image3.jpg" width="282" height="376" loading="lazy" alt="Коктейль Cherry & Tonic з вишнею та льодом" class="recipe-card__image">
+                            </div>
+                            
+                            <div class="recipe-card__body">
+                                <div class="recipe-card__main">
+                                    <div class="recipe-card__header">
+                                        <h2 class="font-heading text-big recipe-card__title">5 Points</h2>
+                                        <p class="recipe-card__desc">Коктейль в стилі “sour”.</p>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Інгредієнти</h3>
+                                        <ol class="recipe-card__ingredients-list">
+                                            <li><span class="recipe-card__measure">50 мл</span> — Настоянка На Бджолах Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">30 мл</span> — Наливка Смородинова домашня Хані Баджер</li>
+                                            <li><span class="recipe-card__measure">3 барні ложки</span> — Джем з чорної смородини</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Цукровий сироп</li>
+                                            <li><span class="recipe-card__measure">25 мл</span> — Фреш лимона</li>
+                                            <li><span class="recipe-card__measure">15 мл</span> — Пастеризований білок</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="recipe-card__section">
+                                        <h3 class="recipe-card__subtitle">Приготування</h3>
+                                        <ul class="recipe-card__steps-list">
+                                            <li>Для початку охолоджуємо склянку</li>
+                                            <li>Додаємо всі інгредієнти до шейкеру, збиваємо міксером</li>
+                                            <li>Додаємо лід та робимо шейк</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="recipe-card__sidebar">
+                                    <div class="recipe-author">
+                                        <div class="recipe-author__avatar">
+                                            <img src="img/avatar3.png" width="78" height="78" loading="lazy" alt="Юлія Каленська">
+                                        </div>
+                                        <div class="recipe-author__info">
+                                            <span class="recipe-author__role">Автор</span>
+                                            <h4 class="recipe-author__name">
+                                                Роман Теліга — бар-менеджер готелю Алофт, мережа Мерріотт. Восьмирічний досвід роботи в міжнародних готелях за кордоном і в Україні
+                                            </h4>   
+                                        </div>
+                                    </div>
+
+                                    <dl class="recipe-card__meta">
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Метод</dt>
+                                            <dd class="recipe-card__meta-desc">Шейк</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Посуд</dt>
+                                            <dd class="recipe-card__meta-desc">Old Fashioned</dd>
+                                        </div>
+                                        <div class="recipe-card__meta-item">
+                                            <dt class="recipe-card__meta-term">Гарнір</dt>
+                                            <dd class="recipe-card__meta-desc">Біттер ангустура (декор та ароматизатор) —4 краплі</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <nav class="pagination" aria-label="Навігація по сторінках рецептів">
+                        <ul class="pagination__list">
+                            <li class="pagination__item">
+                                <span class="pagination__link is-active" aria-current="page">1</span>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">2</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">3</a>
+                            </li>
+                            <li class="pagination__item">
+                                <span class="pagination__dots">...</span>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">6</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="footer__top">
+                <!-- Column 1: Info -->
+                <div class="footer__col footer__col--info">
+                    <div class="footer__logo-wrapper">
+                        <a href="/" class="footer__logo-link" aria-label="На головну">
+                            <img src="img/logo.png" width="126" height="140" alt="Логотип Хані Баджер"
+                                class="footer__logo">
+                        </a>
+                        <p class="footer__slogan">Хані Баджер: настоянки та наливки.</p>
+                    </div>
+                    <address class="footer__address">
+                        <ul class="footer__contacts">
+                            <li class="footer__contact-item">
+                                <a href="tel:+380955154646" class="footer__contact-link">
+                                    <img src="img/icons/phone-icon.svg" width="25" height="25" alt=""
+                                        aria-hidden="true">
+                                    +380 95 515 46 46
+                                </a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <a href="mailto:zakaz@hb.world" class="footer__contact-link">
+                                    <img src="img/icons/email-icon.svg" width="25" height="25" alt=""
+                                        aria-hidden="true">
+                                    zakaz@hb.world
+                                </a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <span class="footer__contact-text">
+                                    <img src="img/icons/location-icon.svg" width="25" height="25" alt=""
+                                        aria-hidden="true">
+                                    Адреса: вул. Грушецька 16, м. Київ, Україна
+                                </span>
+                            </li>
+                        </ul>
+                    </address>
+                    <ul class="footer__socials">
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link" target="_blank" rel="noopener noreferrer"
+                                aria-label="Facebook">
+                                <img src="img/icons/facebook.svg" width="22" height="22" alt="" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">
+                                <img src="img/icons/instagram.svg" width="22" height="22" alt="" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a href="#" class="footer__social-link" target="_blank" rel="noopener noreferrer"
+                                aria-label="Telegram">
+                                <img src="img/icons/telegram.svg" width="22" height="22" alt="" aria-hidden="true">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <nav class="footer__nav" aria-label="Навігація у футері">
+                    <div class="footer__nav-group">
+                        <h3 class="footer__title">Навігація</h3>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item has-submenu">
+                                <div class="footer__nav-head">
+                                    <span class="footer__nav-link">Каталог</span>
+                                    <button class="footer__arrow" aria-label="Відкрити підменю"></button>
+                                </div>
+                                <ul class="footer__sub-list">
+                                    <li class="footer__sub-item"><a href="#" class="footer__sub-link">Напої</a></li>
+                                    <li class="footer__sub-item"><a href="#" class="footer__sub-link">Гурме</a></li>
+                                    <li class="footer__sub-item"><a href="#" class="footer__sub-link">Мерч</a></li>
+                                    <li class="footer__sub-item"><a href="#" class="footer__sub-link">Набори</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Послуги</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Наша історія</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Про виробництво</a>
+                            </li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакти</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Партнерство</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Відгуки</a></li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-group">
+                        <h3 class="footer__title">Покупцям</h3>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Доставка та оплата</a>
+                            </li>
+                            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Повернення товару</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Column 3: Subscription & Payment -->
+                <div class="footer__col footer__col--subscribe">
+                    <h3 class="footer__title">Підписка</h3>
+                    <div class="footer__subscribe-wrapper">
+                        <p class="footer__subscribe-desc">Ми з радістю будемо сповіщати Вас про вигідні знижки і
+                            цікаві матеріали у блозі</p>
+                        <form class="footer__form">
+                            <input type="email" class="footer__input" placeholder="Ваш email"
+                                aria-label="Введіть ваш email" required>
+                            <button type="submit" class="btn btn-dark footer__btn">Підписатися</button>
+                        </form>
+                    </div>
+                    <div class="footer__payments">
+                        <h3 class="footer__title">Оплата</h3>
+                        <ul class="footer__payments-list">
+                            <li class="footer__payments-item">
+                                <img src="img/icons/footer-subscription1.jpg" width="51" height="32" alt="Visa">
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="img/icons/footer-subscription2.jpg" width="51" height="32" alt="Mastercard">
+                            </li>
+                            <li class="footer__payments-item">
+                                <img src="img/icons/footer-subscription3.png" width="51" height="32" alt="Privat24">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© Хані Баджер 2015-2024. Усі права захищені.</p>
+                <div class="footer__developer">
+                    <span>Розробка та підтримка</span>
+                    <a href="https://arto.agency/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/agancy.png" width="56" height="13" alt="ARTO Agency">
+                    </a>
+                </div>
+                <ul class="footer__legal">
+                    <li class="footer__legal-item">
+                        <a href="#" class="footer__legal-link">Договір публічної оферти</a>
+                    </li>
+                    <li class="footer__legal-item">
+                        <a href="#" class="footer__legal-link">Політика конфіденційності</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Block -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__inner">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item has-submenu">
+                        <div class="mobile-menu__head">
+                            <a href="#" class="mobile-menu__link">Каталог</a>
+                            <button class="mobile-menu__arrow" aria-label="Відкрити підменю"></button>
+                        </div>
+                        <ul class="mobile-menu__sub-list">
+                            <li class="mobile-menu__sub-item has-submenu">
+                                <div class="mobile-menu__head">
+                                    <a href="#" class="mobile-menu__sub-link">Напої</a>
+                                    <button class="mobile-menu__arrow" aria-label="Відкрити підменю"></button>
+                                </div>
+                                <ul class="mobile-menu__sub-list">
+                                    <li class="mobile-menu__sub-item"><a href="#"
+                                            class="mobile-menu__sub-link">Настоянки</a></li>
+                                    <li class="mobile-menu__sub-item"><a href="#"
+                                            class="mobile-menu__sub-link">Наливки</a></li>
+                                    <li class="mobile-menu__sub-item"><a href="#" class="mobile-menu__sub-link">Джин</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-menu__sub-item">
+                                <a href="#" class="mobile-menu__sub-link">Гурме</a>
+                            </li>
+                            <li class="mobile-menu__sub-item">
+                                <a href="#" class="mobile-menu__sub-link">Мерч</a>
+                            </li>
+                            <li class="mobile-menu__sub-item">
+                                <a href="#" class="mobile-menu__sub-link">Набори</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Наша історія</a></li>
+                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Новини</a></li>
+                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
