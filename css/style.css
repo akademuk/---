@@ -35,7 +35,7 @@
 
     --text-general-size: 20px;
     --text-big-size: 25px;
-    --text-secondary-size: 15px;
+    --text-secondary-size: 16px;
     --text-small-size: 12px;
     --btn-font-size: 22px;
 
@@ -127,6 +127,8 @@ body {
 .header--black .header__contact-btn img {
     filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
 }
+
+/*todo: лого должно меняться в админке, оформляем через div bacground-image: url("../img/icons/logo-black.png");*/
 
 .header--black .header__logo img {
     content: url("../img/icons/logo-black.png");
@@ -689,6 +691,10 @@ body.no-scroll .header__action {
     font-size: var(--text-small-size);
     font-weight: 600;
     text-transform: capitalize;
+    /*todo: спробуємо ці параметри*/
+    font-size: var(--heading-exsmall-size);
+    margin-bottom: 0.2em;
+
 }
 
 
@@ -1112,6 +1118,8 @@ body.no-scroll .header__action {
     object-position: top;
     display: block;
 }
+
+/*todo: Не видно на экранах >1400*/
 
 .hero-bg-image {
     position: relative;
@@ -2478,7 +2486,7 @@ body.no-scroll .header__action {
     background-repeat: no-repeat;
     background-position: center;
 }
-
+/*todo: mask-image не видно на экранах >1400*/
 .philosophy__quote::after {
     content: '';
     position: absolute;
