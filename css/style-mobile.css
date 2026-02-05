@@ -432,6 +432,10 @@
     .production-technologies__item {
         flex: 1 1 calc(50% - 12px);
     }
+    
+    .blog-card__image-link {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -753,6 +757,35 @@
         flex-direction: column;
     }
 
+    .mixology-page__body {
+        flex-direction: column;
+    }
+
+    .blog-page__sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .blog-page__content .blog-card{
+        min-width: 220px;
+        flex: 1;
+    }
+
+    .blog-page__box--article-gallery-img {
+        gap: 16px;
+    }
+
+    .blog-page__box--article-gallery-img img {
+        max-width: calc(50% - 8px);
+        height: 200px;
+    }
+
+    .blog-page__box--article-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 @media (max-width: 576px) {
@@ -766,5 +799,9 @@
 
     .production-technologies__item {
         flex: 1 1 100%;
+    }
+
+    .banner-action  {
+        flex-wrap: wrap;
     }
 }
