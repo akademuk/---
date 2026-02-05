@@ -297,6 +297,38 @@ function initMixologyTabs() {
     });
 }
 
+function initBlogFilter() {
+    const filters = document.querySelectorAll('input[name="blog_category"]');
+    const cards = document.querySelectorAll('.blog-card');
+
+    if (!filters.length || !cards.length) return;
+
+    filters.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            const filterValue = e.target.value;
+
+            // Optional: Scroll to top of list smoothly
+            // const content = document.querySelector('.blog-page__content');
+            // if (content) content.scrollIntoView({ behavior: 'smooth' });
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = ''; // Restore default display
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Trigger AOS refresh if available
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        });
+    });
+}
+
 function initFancybox() {
     if (typeof Fancybox !== 'undefined') {
         Fancybox.bind("[data-fancybox]", {
@@ -317,5 +349,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTeamSlider();
   initMaterialsProductSlider();
   initMixologyTabs();
+  initBlogFilter();
   initFancybox();
 });
