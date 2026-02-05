@@ -44,6 +44,8 @@
 
 
     --box-shadow-default: 1px 1px 4px 0 rgba(71, 66, 62, 0.24);
+    
+    --bg-color-hero:#748161;
 }
 
 /* ==========================================================================
@@ -1121,6 +1123,7 @@ body.no-scroll .header__action {
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
+    background-color: var(--bg-color-hero);
 }
 
 .hero-action .btn-white {
