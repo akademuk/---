@@ -4064,3 +4064,141 @@ body.no-scroll .header__action {
 .blog-page__box--article-table td {
     font-size: var(--text-secondary-size);
 }
+
+.our-products__breadcrumbs {
+    padding-top: 174px;
+}
+
+.our-products__description .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.our-products__description-box {
+    display: flex;
+    gap: 24px;
+}
+
+.our-products__description-box:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
+
+.our-products__description-left,
+.our-products__description-right {
+    max-width: 588px;
+    width: 100%;
+}
+
+.our-products__description-right {
+    height: 554px;
+}
+
+.our-products__description-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our-products__description-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.our-products__description-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.our-products__description-left h1 {
+    font-weight: 700;
+}
+
+.our-products__description-text h2 {
+    font-size: var(--heading-small-size);
+    font-weight: 400;
+}
+
+.our-products__description-text p {
+    font-size: var(--text-general-size);
+}
+
+.our-products__description-text ol,
+.our-products__description-text ul {
+    padding-left: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.our-products__description {
+    padding-bottom: var(--section-padding-y)
+}
+
+.our-products__awards {
+    padding-bottom: var(--section-padding-y);
+}
+
+.our-products__awards .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.our-products__awards-right {
+    width: 282px;
+    height: 405px;
+    flex-shrink: 0;
+}
+
+.our-products__awards-left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1 0 0;
+}
+
+.our-products__awards-left .awards__body {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.our-products__awards-left .awards__tabs{
+    flex-direction: column;
+}
+
+.our-products__awards-left .swiper-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px 24px;
+}
+
+.our-products__awards-left .awards__content-wrapper {
+    max-width: 632px;
+    width: 100%;
+}
+
+.our-products__awards-left .awards__swiper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.our-products__awards-left .awards__nav-btn {
+    display: none;
+}
+
+.top-sellers {
+    padding: var(--section-padding-y) 0;
+}
+
+.top-sellers .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

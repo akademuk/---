@@ -144,6 +144,9 @@ function initAwards() {
   const swiperContainers = document.querySelectorAll('.awards__swiper');
 
   swiperContainers.forEach(container => {
+    // Check if we should disable swiper for this container
+    if (container.closest('.awards__body--not-swiper')) return;
+
     new Swiper(container, {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -329,6 +332,34 @@ function initBlogFilter() {
     });
 }
 
+function initProductFilter() {
+    const filters = document.querySelectorAll('input[name="product_category"]');
+    // We target .blog-card because product.html reuses this class
+    const cards = document.querySelectorAll('.blog-card'); 
+
+    if (!filters.length) return; // Don't check !cards.length strictly, maybe no products yet? But usually fine.
+
+    filters.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            const filterValue = e.target.value;
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = ''; 
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        });
+    });
+}
+
 function initFancybox() {
     if (typeof Fancybox !== 'undefined') {
         Fancybox.bind("[data-fancybox]", {
@@ -350,5 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMaterialsProductSlider();
   initMixologyTabs();
   initBlogFilter();
+  initProductFilter();
   initFancybox();
 });
