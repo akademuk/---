@@ -249,7 +249,8 @@ function initTeamSlider() {
 function initMaterialsProductSlider() {
     const slider = document.querySelector('.materials-product-swiper');
     
-    if (slider) {
+    // Check if slider exists and doesn't have the 'not-swiper' class
+    if (slider && !slider.classList.contains('materials-product-not-swiper')) {
         new Swiper(slider, {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -365,6 +366,49 @@ function initProductFilter() {
     });
 }
 
+function initPartnerSlider() {
+    const container = document.querySelector('.partner-swiper');
+    if (!container) return;
+
+    new Swiper(container, {
+        slidesPerView: "auto",
+        spaceBetween: 24,
+        loop: true,
+    });
+}
+
+function initFaq() {
+    const buttons = document.querySelectorAll('.faq-content__accardion-btn');
+
+    if (!buttons.length) return;
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const answer = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('active');
+
+            // Close other items (optional - strict accordion behavior)
+            // buttons.forEach(otherBtn => {
+            //     if (otherBtn !== btn && otherBtn.classList.contains('active')) {
+            //         otherBtn.classList.remove('active');
+            //         otherBtn.setAttribute('aria-expanded', 'false');
+            //         otherBtn.nextElementSibling.style.maxHeight = null;
+            //     }
+            // });
+
+            if (isOpen) {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+                answer.style.maxHeight = null;
+            } else {
+                btn.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+}
+
 function initFancybox() {
     if (typeof Fancybox !== 'undefined') {
         Fancybox.bind("[data-fancybox]", {
@@ -387,5 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMixologyTabs();
   initBlogFilter();
   initProductFilter();
+  initPartnerSlider();
+  initFaq();
   initFancybox();
 });
