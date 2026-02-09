@@ -692,11 +692,11 @@ body.no-scroll .header__action {
 .header__sub-item .header__sub-list .header__sub-link {
     color: var(--color-text);
     font-family: var(--heading-font);
-    font-size: var(--text-small-size);
     font-weight: 600;
     text-transform: capitalize;
+    font-size: var(--heading-exsmall-size);
+    margin-bottom: 0.2em;
 }
-
 
 .header__sub-list {
     position: absolute;
