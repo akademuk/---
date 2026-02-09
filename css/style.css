@@ -5139,3 +5139,10 @@ body.no-scroll .header__action {
     font-weight: 400;
     line-height: normal; 
 }
+
+.partner-swiper__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
