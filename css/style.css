@@ -72,7 +72,7 @@ html.lenis body {
 
 html {
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 body {
@@ -977,7 +977,7 @@ body.no-scroll .header__action {
     inset: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     overflow: hidden;
 }
 
@@ -985,6 +985,15 @@ body.no-scroll .header__action {
     height: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 3;
+}
+
+.history-about__bg-after img {
+    width: 100%;
+    height: 100%;
+    object-fit: 100% 100%;
+    object-position: bottom;
 }
 
 .hero-title {
@@ -1026,6 +1035,7 @@ body.no-scroll .header__action {
     bottom: -115px;
     left: 91px;
     display: flex;
+    z-index: 3;
 }
 
 .hero-bg-card--1 {
@@ -1127,8 +1137,30 @@ body.no-scroll .header__action {
     mask-size: 100% 103%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
+    -webkit-mask-position: bottom;
+    mask-position: bottom;
+}
+
+.history-about__bg-after {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.00) 21.88%), linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 2222;
 }
 
 .hero-action .btn-white {
@@ -1139,6 +1171,7 @@ body.no-scroll .header__action {
 .hero-bg-image img {
     position: relative;
     z-index: 0;
+    object-fit: cover;
 }
 
 
@@ -2511,6 +2544,56 @@ body.no-scroll .header__action {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    -webkit-mask-image: url('../img/history-about-bgs-top.svg'), url('../img/history-about-bg-botom.svg'), linear-gradient(#000, #000);
+    mask-image: url('../img/history-about-bgs-top.svg'), url('../img/history-about-bg-botom.svg'), linear-gradient(#000, #000);
+    -webkit-mask-position: top center, bottom center;
+    mask-position: top center, bottom center;
+    -webkit-mask-size: auto, auto, 100% calc(100% - 120px);
+    mask-size: auto, auto, 100% calc(100% - 120px);
+    -webkit-mask-repeat: repeat-x, repeat-x, no-repeat;
+    mask-repeat: repeat-x, repeat-x, no-repeat;
+    mix-blend-mode: multiply;
+}
+
+/* .history-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/history-about-bgs-top.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+
+.history-about__bg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+    z-index: 1;
+}
+
+.history-about__bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 2;
+    background-size: 150px 150px;
 }
 
 .history-about__bg img {
