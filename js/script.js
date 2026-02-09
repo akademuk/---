@@ -1,27 +1,3 @@
-// Initialize Lenis
-// Check if browser is Safari
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-const isProductPage = document.body.classList.contains('artosingle-product');
-
-let lenis; // Define lenis in the global scope
-
-if (!isSafari && !isProductPage) {
-  lenis = new Lenis({
-    lerp: 0.1,
-    smoothWheel: true,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-} else {
-  // Optional: Add a class for CSS adjustments if needed
-  document.documentElement.classList.add('is-safari');
-}
-
 // Initialize AOS
 AOS.init({
   once: true,
@@ -120,14 +96,6 @@ function initBurger() {
       burgerBtn.classList.toggle('is-active');
       mobileMenu.classList.toggle('is-active');
       body.classList.toggle('no-scroll');
-
-      if (typeof lenis !== 'undefined' && lenis) {
-        if (body.classList.contains('no-scroll')) {
-          lenis.stop();
-        } else {
-          lenis.start();
-        }
-      }
     });
   }
 }

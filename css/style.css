@@ -51,26 +51,6 @@
 /* ==========================================================================
    Base Styles
    ========================================================================== */
-html.lenis,
-html.lenis body {
-    height: auto !important;
-}
-
-.lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-    overflow: hidden !important;
-}
-
-.lenis.lenis-scrolling iframe {
-    pointer-events: none;
-}
 
 html {
     width: 100%;
@@ -699,15 +679,8 @@ body.no-scroll .header__action {
     font-size: var(--text-small-size);
     font-weight: 600;
     text-transform: capitalize;
-<<<<<<< HEAD
     font-size: var(--heading-exsmall-size);
     margin-bottom: 0.2em;
-=======
-    /*todo: спробуємо ці параметри*/
-    font-size: var(--heading-exsmall-size);
-    margin-bottom: 0.2em;
-
->>>>>>> feature/style-comments
 }
 
 .header__sub-list {
@@ -1151,7 +1124,6 @@ body.no-scroll .header__action {
     mask-size: 100% 103%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-<<<<<<< HEAD
     -webkit-mask-position: bottom;
     mask-position: bottom;
 }
@@ -1176,11 +1148,6 @@ body.no-scroll .header__action {
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 2222;
-=======
-    -webkit-mask-position: center;
-    mask-position: center;
-    background-color: var(--bg-color-hero);
->>>>>>> feature/style-comments
 }
 
 .hero-action .btn-white {
@@ -4374,14 +4341,25 @@ body.no-scroll .header__action {
     gap: 24px;
 }
 
-.product-woocommerce-box {
+.woocommerce-breadcrumb {
+        max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+}
+
+
+
+.product-woocommerce-box .container {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     font-family: var(--text-font);
     position: relative;
-    padding-bottom: var(--section-padding-y);
+    padding: 0 var(--section-padding-x) var(--section-padding-y);  
 }
 
 .product-woocommerce-box--history {
@@ -4406,6 +4384,17 @@ body.no-scroll .header__action {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: flex-end;
+    max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+    padding-bottom: var(--section-padding-y);
+}
+
+.reviews-product .reviews__content{
+    max-width: 486px;
 }
 
 .product-woocommerce-box--history-image {
@@ -4422,6 +4411,7 @@ body.no-scroll .header__action {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 130px;
 }
 
 .product-woocommerce-box--history-list {
@@ -4758,12 +4748,18 @@ body.no-scroll .header__action {
     line-height: normal;
 }
 
-.flex-viewport {
+/* .flex-viewport {
     display: none;
-}
+} */
 
 .product .reviews .reviews__container{
     flex-direction: row;
+    font-family: var(--text-font);
+    max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
 }
 
 .services-body {
@@ -5274,4 +5270,250 @@ body.no-scroll .header__action {
     height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.section-mixology {
+    padding: var(--section-padding-y) 0;
+}
+
+.section-mixology {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-mixology__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.section-mixology__title {
+    width: 894px;
+    height: 111px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+.section-mixology__top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 190px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.section-mixology__top-text p {
+    font-size: var(--text-secondary-size);
+    font-weight: 400;
+    line-height: normal;
+        margin-bottom: 0;
+}
+
+.section-mixology__top-text a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--btn-font-size);
+    font-weight: 500;
+    line-height: normal;
+    color: var(--color-text);
+}
+
+.section-mixology__top-text a img {
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+}
+
+.section-mixology__body {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.section-mixology__item {
+    flex: 1 1 calc(33.333% - 16px);
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.section-mixology__item-image {
+    width: 180px;
+    height: 276px;
+    aspect-ratio: 15/23;
+}
+
+.section-mixology__item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section-mixology__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 15px;
+}
+
+.section-mixology__item-content h3 {
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.section-mixology__item-content p {
+    font-size: var(--text-secondary-size);
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+
+.section-mixology .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-family: var(--text-font);
+    max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+}
+
+.up-sells {
+    padding: var(--section-padding-x) 0;
+}
+
+.up-sells .container {
+    max-width: var(--container);
+    margin: 0 auto;
+    width: 100%;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+}
+
+.title-row__text {
+    font-size: var(--text-secondary-size);
+    font-weight: 400;
+    font-family: var(--text-font);
+}
+
+.title-row__text--small {
+    max-width: 384px;
+    width: 100%;
+}
+
+.product-style .type-product{
+    max-width: 384px;
+    width: 100%;
+}
+
+.product-style .type-product .attachment-woocommerce_thumbnail {
+    height: 446px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.product-style .type-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-style .woocommerce-LoopProduct-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-style .woocommerce-LoopProduct-link .onsale {
+    display: inline-flex;
+    padding: 5px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #FFB700;
+    color: #FFF;
+    font-family: var(--text-font);
+    font-size: var(--heading-exsmall-size);
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.product-style .woocommerce-loop-product__title {
+    color: var(--color-text);
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: var(--decorative-general-size);
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.product-style .woocommerce-LoopProduct-link .price {
+    color: var(--color-text);
+    text-align: center;
+    font-size: var(--heading-small-size);
+    font-weight: 600;
+    font-family: var(--text-font);
+    line-height: normal;
+}
+
+.product-style .product_type_simple {
+    display: inline-flex;
+    height: 50px;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1px;
+    background: #47423E;
+    box-shadow: 1px 1px 4px 0 rgba(71, 66, 62, 0.24);
+    color: var(--color-white);
+    margin: 24px 0;
+}
+
+.reviews__container-image {
+    width: 228px;
+    height: 540px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.reviews-product .reviews__media{
+    position: relative;
+}
+
+.reviews-product .reviews__media img {
+        width: 650px;
+    height: 718.196px;
+    aspect-ratio: 143/158;
+}
+
+.woocommerce-Price-amount {
+    font-family: var(--text-font);
+    font-size: var(--heading-small-size);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.product-style {
+    display: flex;
+    gap: 24px;
 }
