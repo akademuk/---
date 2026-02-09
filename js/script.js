@@ -31,27 +31,69 @@ AOS.init({
    Navigation Menu Script
    ========================================================================== */
 function initMenu() {
-  const menuItems = document.querySelectorAll('.header__nav-item, .header__sub-item');
+  // 1. Top Level Items (Hover)
+  const navItems = document.querySelectorAll('.header__nav-item');
 
-  menuItems.forEach(item => {
+  navItems.forEach(item => {
     const link = item.querySelector('a');
     const submenu = item.querySelector('ul');
 
     if (submenu) {
       item.classList.add('has-submenu');
       
-      // Create and append arrow
-      const arrow = document.createElement('span');
-      arrow.classList.add('menu-arrow');
-      link.appendChild(arrow);
+      if (!link.querySelector('.menu-arrow')) {
+        const arrow = document.createElement('span');
+        arrow.classList.add('menu-arrow');
+        link.appendChild(arrow);
+      }
 
-      // Hover events
       item.addEventListener('mouseenter', () => {
         item.classList.add('is-active');
       });
 
       item.addEventListener('mouseleave', () => {
         item.classList.remove('is-active');
+      });
+    }
+  });
+
+  // 2. Sub Items (Click)
+  const subItems = document.querySelectorAll('.header__sub-item');
+
+  subItems.forEach(item => {
+    const link = item.querySelector('a');
+    const submenu = item.querySelector('ul');
+
+    if (submenu) {
+      item.classList.add('has-submenu');
+      
+      if (!link.querySelector('.menu-arrow')) {
+        const arrow = document.createElement('span');
+        arrow.classList.add('menu-arrow');
+        link.appendChild(arrow);
+      }
+
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation(); // Avoid bubbling up
+        
+        // Close siblings
+        const parent = item.parentElement;
+        const siblings = parent.querySelectorAll('.header__sub-item.is-active');
+        siblings.forEach(sibling => {
+            if (sibling !== item) sibling.classList.remove('is-active');
+        });
+
+        item.classList.toggle('is-active');
+      });
+    }
+  });
+
+  // Close submenus when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header__sub-item')) {
+      document.querySelectorAll('.header__sub-item.is-active').forEach(el => {
+        el.classList.remove('is-active');
       });
     }
   });
