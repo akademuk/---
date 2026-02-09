@@ -2487,6 +2487,15 @@ body.no-scroll .header__action {
     font-style: italic;
 }
 
+.achievements__list-text {
+    max-width: 588px;
+    width: 100%;
+}
+
+.align-items {
+    align-items: flex-start;
+}
+
 .philosophy-bg {
     width: 690px;
     height: 190px;
