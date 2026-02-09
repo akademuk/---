@@ -126,8 +126,16 @@ body {
     filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
 }
 
-.header--black .header__logo img {
+.header--black .header__logo .header__logo-img {
     content: url("../img/icons/logo-black.png");
+}
+
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .header--black .header__search-input {
