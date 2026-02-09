@@ -31,7 +31,7 @@ AOS.init({
    Navigation Menu Script
    ========================================================================== */
 function initMenu() {
-  // 1. Top Level Items (Hover)
+  // 1. Top Level Items (Click)
   const navItems = document.querySelectorAll('.header__nav-item');
 
   navItems.forEach(item => {
@@ -47,12 +47,18 @@ function initMenu() {
         link.appendChild(arrow);
       }
 
-      item.addEventListener('mouseenter', () => {
-        item.classList.add('is-active');
-      });
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-      item.addEventListener('mouseleave', () => {
-        item.classList.remove('is-active');
+        // Close other top level items
+        navItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('is-active')) {
+                otherItem.classList.remove('is-active');
+            }
+        });
+
+        item.classList.toggle('is-active');
       });
     }
   });
@@ -91,6 +97,11 @@ function initMenu() {
 
   // Close submenus when clicking outside
   document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header__nav-item')) {
+      document.querySelectorAll('.header__nav-item.is-active').forEach(el => {
+        el.classList.remove('is-active');
+      });
+    }
     if (!e.target.closest('.header__sub-item')) {
       document.querySelectorAll('.header__sub-item.is-active').forEach(el => {
         el.classList.remove('is-active');

@@ -2490,6 +2490,15 @@ body.no-scroll .header__action {
 .achievements__list-text {
     max-width: 588px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.achievements__list-text ul,
+.achievements__list-text  ol {
+    margin: 0;
+    padding-left: 20px;
 }
 
 .align-items {
