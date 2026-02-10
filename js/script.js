@@ -438,6 +438,145 @@ function initFancybox() {
     }
 }
 
+function initShopFilter() {
+    // 1. Inputs
+    const radios = document.querySelectorAll('.sidebar input[type="radio"]');
+    const minPriceInput = document.getElementById('min_price');
+    const maxPriceInput = document.getElementById('max_price');
+    const priceFrom = document.querySelector('.price_label .from');
+    const priceTo = document.querySelector('.price_label .to');
+
+    if (!radios.length && !minPriceInput) {
+        // If inputs are missing, still try to init accordion if category_list exists
+        const filterBlocks = document.querySelectorAll('.category_list');
+        if (!filterBlocks.length) return;
+    }
+
+    // 2. Prevent link navigation inside labels
+    const filterLinks = document.querySelectorAll('.sidebar .cat-item a');
+    filterLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Trigger the associated input manually if needed, 
+            // though clicking the label usually handles it.
+            const radio = link.closest('label').querySelector('input');
+            if (radio && !radio.checked) {
+                radio.checked = true;
+                radio.dispatchEvent(new Event('change'));
+            }
+        });
+    });
+
+    // 3. Price Slider Logic
+    const sliderTrack = document.querySelector('.slider-track-fill');
+    
+    function updatePrice() {
+        if (!minPriceInput || !maxPriceInput) return;
+
+        let minVal = parseInt(minPriceInput.value);
+        let maxVal = parseInt(maxPriceInput.value);
+        
+        // Validation limits
+        const minAttr = parseInt(minPriceInput.min);
+        const maxAttr = parseInt(minPriceInput.max);
+
+        // Swap if min > max
+        if (minVal > maxVal) {
+            let temp = minVal;
+            minVal = maxVal;
+            maxVal = temp;
+        }
+
+        if (priceFrom) priceFrom.textContent = minVal + ' грн';
+        if (priceTo) priceTo.textContent = maxVal + ' грн';
+
+        // Update Track
+        if (sliderTrack) {
+            const range = maxAttr - minAttr;
+            const minPercent = ((minVal - minAttr) / range) * 100;
+            const maxPercent = ((maxVal - minAttr) / range) * 100;
+            
+            sliderTrack.style.left = minPercent + "%";
+            sliderTrack.style.right = (100 - maxPercent) + "%";
+        }
+        
+        // Debounce filter trigger or just trigger it? 
+        // Usually wait for user to stop dragging. 
+        // For now, update text live, do not trigger filter on every move unless requested.
+    }
+
+    // Trigger on change (end of drag) for filter, input for visual
+    if (minPriceInput) {
+        minPriceInput.addEventListener('input', updatePrice);
+        minPriceInput.addEventListener('change', triggerFilter);
+    }
+    if (maxPriceInput) {
+        maxPriceInput.addEventListener('input', updatePrice);
+        maxPriceInput.addEventListener('change', triggerFilter);
+    }
+
+    // Init
+    updatePrice();
+
+    // 4. Radio Logic
+    radios.forEach(radio => {
+        radio.addEventListener('change', triggerFilter);
+    });
+
+    // OK Button Logic
+    const okBtn = document.querySelector('.filter-btn');
+    if (okBtn) {
+        okBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            triggerFilter();
+        });
+    }
+
+    // 5. Filter Function (Placeholder)
+    function triggerFilter() {
+        const filters = {};
+
+        // Collect checked radios
+        radios.forEach(r => {
+            if (r.checked) {
+                filters[r.name] = r.value;
+            }
+        });
+
+        // Collect price
+        if (minPriceInput && maxPriceInput) {
+            filters.min_price = Math.min(minPriceInput.value, maxPriceInput.value);
+            filters.max_price = Math.max(minPriceInput.value, maxPriceInput.value);
+        }
+
+        console.log("Selected Shop Filters:", filters);
+        
+        // TODO: Call your grid filtering logic here
+        // filterShopGrid(filters);
+    }
+
+    // 6. Filter Accordion (Collapsible)
+    const filterBlocks = document.querySelectorAll('.category_list');
+
+    filterBlocks.forEach(block => {
+        const title = block.querySelector('h4');
+        if (title) {
+            // Add arrow
+            if (!title.querySelector('.filter-arrow')) {
+                const arrow = document.createElement('span');
+                arrow.classList.add('filter-arrow');
+                // You can style .filter-arrow in CSS (e.g., background-image)
+                title.appendChild(arrow);
+            }
+
+            // Click event
+            title.addEventListener('click', () => {
+                block.classList.toggle('active');
+            });
+        }
+    });
+}
+
 // Call scripts
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
@@ -455,4 +594,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPartnerSlider();
   initFaq();
   initFancybox();
+  initShopFilter();
 });
