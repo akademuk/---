@@ -1116,8 +1116,8 @@ body.no-scroll .header__action {
     position: relative;
     -webkit-mask-image: url('../img/hero-after.png');
     mask-image: url('../img/hero-after.png');
-    -webkit-mask-size: 100% auto;
-    mask-size: 100% auto;
+    -webkit-mask-size: 100% 110%;
+    mask-size: 100% 110%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: bottom;
@@ -5246,7 +5246,7 @@ body.no-scroll .header__action {
      flex: 1 1 calc(33.33% - 16px);
 }
 
-.form input {
+.form__label input {
     min-height: 50px;
     padding: 15px 0 15px 20px;
     border-radius: 1px;
@@ -5259,7 +5259,7 @@ body.no-scroll .header__action {
     line-height: normal;
 }
 
-.form input:placeholder {
+.form__label input:placeholder {
     color: #95908D;
     font-family: var(--text-font);
     font-size: var(--text-secondary-size);
@@ -6081,4 +6081,132 @@ body.no-scroll .header__action {
     height: 100%;
     object-fit: contain;
     display: block;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-page__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.contact-page__list-item {
+    flex: 1 1 calc(25% - 72px / 4);
+    display: flex;
+    height: 107px;
+    padding: 20px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 2px;
+    border: 1px solid #E6E8EA;
+    background: #FEFDFD;
+}
+
+.contact-page__list-item span {
+    text-align: center;
+    font-size: var(--heading-small-size);
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-page__list-item a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--text-font);
+    font-size: var(--text-secondary-size);
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.contact-page__list-item-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-page-info {
+    display: flex;
+    gap: 24px;
+}
+
+.contact-page-maps {
+    width: 708px;
+    height: 646px;
+    position: relative;
+}
+
+.contact-page-maps img {
+    min-width: 708px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contact-page-form {
+    width: 588px;
+    height: 646px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #E6E8EA;
+    background: #FFFDF2;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.contact-page-form-title {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.contact-page-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-page-form-title p {
+    text-align: center;
+    font-size: var(--text-general-size);
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-page-form-box input{
+    min-height: 40px;
+    padding: 11px 0 11px 20px;
+    background: var(--color-white);
+}
+
+.form__textarea {
+    height: 80px;
+    padding: 15px 0 15px 20px;
+    border-radius: 1px;
+    border: 1px solid #E6E8EA;
+    background: #FFF;
+    resize: none;
+}
+
+.contact-page-form-box .form__button {
+    padding: 15px 20px;
+    width: 100%;
 }
