@@ -438,7 +438,40 @@ function initFancybox() {
     }
 }
 
+
+function initArticleSlider() {
+    const slider = document.querySelector('.blog-page__box--article-swiper');
+    if (!slider) return;
+
+    new Swiper(slider, {
+        slidesPerView: 1,
+        pagination: {
+            el: '.blog-page__box--article-slider-pagination',
+            clickable: true,
+        },
+    });
+}
+
 function initShopFilter() {
+    // 0. Filter Accordion (Collapsible) - Moved to top to ensure it inits
+    const accordionBlocks = document.querySelectorAll('.category_list');
+    accordionBlocks.forEach(block => {
+        const title = block.querySelector('h4');
+        if (title) {
+            // Add arrow
+            if (!title.querySelector('.filter-arrow')) {
+                const arrow = document.createElement('span');
+                arrow.classList.add('filter-arrow');
+                title.appendChild(arrow);
+            }
+
+            // Click event
+            title.addEventListener('click', () => {
+                block.classList.toggle('active');
+            });
+        }
+    });
+
     // 1. Inputs
     const radios = document.querySelectorAll('.sidebar input[type="radio"]');
     const minPriceInput = document.getElementById('min_price');
@@ -447,9 +480,8 @@ function initShopFilter() {
     const priceTo = document.querySelector('.price_label .to');
 
     if (!radios.length && !minPriceInput) {
-        // If inputs are missing, still try to init accordion if category_list exists
-        const filterBlocks = document.querySelectorAll('.category_list');
-        if (!filterBlocks.length) return;
+        // If inputs are missing, but we already init accordion above, just return
+        return;
     }
 
     // 2. Prevent link navigation inside labels
@@ -554,27 +586,6 @@ function initShopFilter() {
         // TODO: Call your grid filtering logic here
         // filterShopGrid(filters);
     }
-
-    // 6. Filter Accordion (Collapsible)
-    const filterBlocks = document.querySelectorAll('.category_list');
-
-    filterBlocks.forEach(block => {
-        const title = block.querySelector('h4');
-        if (title) {
-            // Add arrow
-            if (!title.querySelector('.filter-arrow')) {
-                const arrow = document.createElement('span');
-                arrow.classList.add('filter-arrow');
-                // You can style .filter-arrow in CSS (e.g., background-image)
-                title.appendChild(arrow);
-            }
-
-            // Click event
-            title.addEventListener('click', () => {
-                block.classList.toggle('active');
-            });
-        }
-    });
 }
 
 // Call scripts
@@ -595,4 +606,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initFancybox();
   initShopFilter();
+  initArticleSlider();
 });

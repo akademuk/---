@@ -542,6 +542,15 @@
     .form__button {
         min-width: 100%;
     }
+
+    #primary .products-table .type-product {
+        flex: 1 1 100%;
+    }
+
+    .site-main-title {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -927,6 +936,22 @@
     .services-body-article {
         flex: 1 1 calc(50% - 12px);
     }
+
+    .shop-main .container {
+        flex-direction: column-reverse;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    #primary .products-table .type-product {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    .materials__gallery {
+        height: auto;
+    }
     
 }
 
@@ -986,5 +1011,9 @@
 
     .form__button {
         min-height: 50px;
+    }
+
+    #primary .products-table .type-product {
+        flex: 1 1 100%;
     }
 }
