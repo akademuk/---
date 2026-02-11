@@ -32,6 +32,7 @@
         type="text/css" media="all">
     <link rel="stylesheet" id="admin-bar-css" href="https://h.arto.agency/wp-includes/css/admin-bar.min.css?ver=6.9.1"
         type="text/css" media="all">
+    <link rel="stylesheet" href="css/reset.css">
     <style id="admin-bar-inline-css" type="text/css">
         @media screen {
             html {
@@ -735,8 +736,12 @@
         }
     </style>
 
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/fancybox.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-mobile.css">
 </head>
 
 <body
@@ -998,7 +1003,47 @@
                         </div>
                         <div class="blog-page__box--article-slider">
                             <div class="swiper blog-page__box--article-swiper">
-                                <div class="swiper-wrapper"></div>
+                                <div class="swiper-wrapper">
+                                    <div class="blog-page__box--article-slide swiper-slide">
+                                        <div class="blog-page__box--article-slide-img">
+                                            <img src="img/article-slide1.jpg" width="792" height="280" loading="lazy" alt="">
+                                        </div>
+                                        <div class="blog-page__box--article-slide-content">
+                                            <h3>НАСТОЯНКА "ПОРІЧКА"</h3>
+                                            <p>Завдяки високому вмісту пектинів, порічка застосовується для виведення з організму людини токсинів та шлаків, нормалізує гормональний фон</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-page__box--article-slide swiper-slide">
+                                        <div class="blog-page__box--article-slide-img">
+                                            <img src="img/article-slide1.jpg" width="792" height="280" loading="lazy" alt="">
+                                        </div>
+                                        <div class="blog-page__box--article-slide-content">
+                                            <h3>НАСТОЯНКА "ПОРІЧКА"</h3>
+                                            <p>Завдяки високому вмісту пектинів, порічка застосовується для виведення з організму людини токсинів та шлаків, нормалізує гормональний фон</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-page__box--article-slide swiper-slide">
+                                        <div class="blog-page__box--article-slide-img">
+                                            <img src="img/article-slide1.jpg" width="792" height="280" loading="lazy" alt="">
+                                        </div>
+                                        <div class="blog-page__box--article-slide-content">
+                                            <h3>НАСТОЯНКА "ПОРІЧКА"</h3>
+                                            <p>Завдяки високому вмісту пектинів, порічка застосовується для виведення з організму людини токсинів та шлаків, нормалізує гормональний фон</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-page__box--article-slide swiper-slide">
+                                        <div class="blog-page__box--article-slide-img">
+                                            <img src="img/article-slide1.jpg" width="792" height="280" loading="lazy" alt="">
+                                        </div>
+                                        <div class="blog-page__box--article-slide-content">
+                                            <h3>НАСТОЯНКА "ПОРІЧКА"</h3>
+                                            <p>Завдяки високому вмісту пектинів, порічка застосовується для виведення з організму людини токсинів та шлаків, нормалізує гормональний фон</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-page__box--article-slider-pagination swiper-pagination">
+
+                                </div>
                             </div>
                         </div>
                         <div class="blog-page__box--article-section">
@@ -1217,6 +1262,88 @@
         </div>
     </div>
 
+    <section class="also-like">
+        <div class="container">
+            <div class="also-like__title">
+                <h2 class="font-heading heading-general">Вам також може сподобатись</h2>
+            </div>
+            <div class="also-like__body">
+
+            </div>
+        </div>
+    </section>
+
+            <section class="mixology">
+            <div class="container">
+                <div class="mixology__content" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="heading-general font-heading mixology__title">Міксологія</h2>
+                    <p class="mixology__text">Lorem ipsum dolor sit amet consectetur. Id non sapien nulla potenti
+                        malesuada in nunc ornare nam. Integer posuere iaculis turpis massa. Orci tellus odio gravida sit
+                        montes ac et. Hendrerit consequat vel ullamcorper nascetur fringilla dolor.</p>
+                    <ul class="mixology__list">
+                        <li class="mixology__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                            <a href="/" class="mixology__link">
+                                <h3 class="mixology__link-title">Cherry & Tonic</h3>
+                                <span class="mixology__link-desc">Вишневий, насичений, тонізуючий.</span>
+                                <img src="img/icons/link.svg" width="25" height="25" loading="lazy" alt=""
+                                    aria-hidden="true" class="mixology__link-icon">
+                            </a>
+                        </li>
+                        <li class="mixology__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                            <a href="/" class="mixology__link">
+                                <h3 class="mixology__link-title">Currant Highball</h3>
+                                <span class="mixology__link-desc">Легкий, освіжаючий коктейль.</span>
+                                <img src="img/icons/link.svg" width="25" height="25" loading="lazy" alt=""
+                                    aria-hidden="true" class="mixology__link-icon">
+                            </a>
+                        </li>
+                        <li class="mixology__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                            <a href="/" class="mixology__link">
+                                <h3 class="mixology__link-title">Amber Evening</h3>
+                                <span class="mixology__link-desc">"All day cocktail" в стилі "Manhattan".</span>
+                                <img src="img/icons/link.svg" width="25" height="25" loading="lazy" alt=""
+                                    aria-hidden="true" class="mixology__link-icon">
+                            </a>
+                        </li>
+                        <li class="mixology__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                            <a href="/" class="mixology__link">
+                                <h3 class="mixology__link-title">Redberry Rossini</h3>
+                                <span class="mixology__link-desc">Redberry Rossini</span>
+                                <img src="img/icons/link.svg" width="25" height="25" loading="lazy" alt=""
+                                    aria-hidden="true" class="mixology__link-icon">
+                            </a>
+                        </li>
+                        <li class="mixology__item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                            <a href="/" class="mixology__link">
+                                <h3 class="mixology__link-title">Багряна квітка</h3>
+                                <span class="mixology__link-desc">Коктейль в українському стилі.</span>
+                                <img src="img/icons/link.svg" width="25" height="25" loading="lazy" alt=""
+                                    aria-hidden="true" class="mixology__link-icon">
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/" class="btn btn-dark mixology__link-more">Всі рецепти коктейлів</a>
+                </div>
+                <div class="mixology__media" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="mixology__media-main">
+                        <img src="img/mixology-image.png" width="624" height="690" loading="lazy"
+                            alt="Міксологія з продукцією Хані Баджер">
+                    </div>
+                    <div class="mixology__media-group">
+                        <div class="mixology__media-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <img src="img/mixology-image-flex1.png" width="204" height="244" alt="" aria-hidden="true">
+                        </div>
+                        <div class="mixology__media-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                            <img src="img/mixology-image-flex2.png" width="204" height="244" alt="" aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mixology__bg">
+                <img src="img/mixology-bg.jpg" width="1440" height="843" loading="lazy" alt="" aria-hidden="true" data-aos="fade" data-aos-duration="2000">
+            </div>
+        </section>
+
     <footer>
         <div id="footer">
             <div class="container">
@@ -1272,9 +1399,9 @@
         src="https://h.arto.agency/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.4.3"
         id="wc-order-attribution-js"></script>
 
-    <script src="js/aos.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         jQuery(document).ready(function ($) {
@@ -1310,8 +1437,6 @@
         });
     </script>
 
-
     <div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div>
 </body>
-
 </html>

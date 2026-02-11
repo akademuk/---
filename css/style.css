@@ -108,10 +108,8 @@ body {
     filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
 }
 
-/*todo: лого должно меняться в админке, оформляем через div bacground-image: url("../img/icons/logo-black.png");*/
-
-.header--black .header__logo img {
-    content: url("../img/icons/logo-black.png");
+.header--black .header__logo .header__logo-img {
+    background-image: url("../img/icons/logo-black.png") !important;
 }
 
 .header__logo-img {
@@ -1114,14 +1112,12 @@ body.no-scroll .header__action {
     display: block;
 }
 
-/*todo: Не видно на экранах >1400*/
-
 .hero-bg-image {
     position: relative;
     -webkit-mask-image: url('../img/hero-after.png');
     mask-image: url('../img/hero-after.png');
-    -webkit-mask-size: 100% 103%;
-    mask-size: 100% 103%;
+    -webkit-mask-size: 100% auto;
+    mask-size: 100% auto;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-position: bottom;
@@ -1588,6 +1584,12 @@ body.no-scroll .header__action {
     max-width: 486px;
     width: 100%;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.international-recognition__text {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -2520,7 +2522,6 @@ body.no-scroll .header__action {
     background-repeat: no-repeat;
     background-position: center;
 }
-/*todo: mask-image не видно на экранах >1400*/
 .philosophy__quote::after {
     content: '';
     position: absolute;
@@ -2551,10 +2552,10 @@ body.no-scroll .header__action {
     overflow: hidden;
     -webkit-mask-image: url('../img/history-about-bgs-top.svg'), url('../img/history-about-bg-botom.svg'), linear-gradient(#000, #000);
     mask-image: url('../img/history-about-bgs-top.svg'), url('../img/history-about-bg-botom.svg'), linear-gradient(#000, #000);
-    -webkit-mask-position: top center, bottom center;
-    mask-position: top center, bottom center;
-    -webkit-mask-size: auto, auto, 100% calc(100% - 120px);
-    mask-size: auto, auto, 100% calc(100% - 120px);
+    -webkit-mask-position: top center, bottom center, center center;
+    mask-position: top center, bottom center, center center;
+    -webkit-mask-size: 100% auto, 100% auto, 100% calc(100% - 120px);
+    mask-size: 100% auto, 100% auto, 100% calc(100% - 120px);
     -webkit-mask-repeat: repeat-x, repeat-x, no-repeat;
     mask-repeat: repeat-x, repeat-x, no-repeat;
     mix-blend-mode: multiply;
@@ -3820,12 +3821,6 @@ body.no-scroll .header__action {
 
 .mixology-page__header p {
     max-width: 588px;
-}
-
-.mixology-page__body {
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 16px;
 }
 
 .blog-page__sidebar {
@@ -5532,6 +5527,7 @@ body.no-scroll .header__action {
     max-width: 794px;
     width: 100%;
     margin: 0;
+    min-width: 0; /* Add min-width: 0 to allow flex item to shrink below content size */
 }
 
 .shop-main {
@@ -5984,4 +5980,105 @@ body.no-scroll .header__action {
 
 .woocommerce-loop-product__boxs .price {
     margin: 0;
+}
+
+.artoarchive .blog-page__box--article-section p,
+.artoarchive .blog-page__box--article-section h2,
+.artoarchive .blog-page__box--article-section h3,
+.artoarchive .blog-page__box--article-section ul, 
+.artoarchive .blog-page__box--article-section ol {
+    margin: 0;
+}
+
+.artoarchive .blog-page__box--article-section ul li{
+    list-style: disc;
+}
+
+.blog-page__box--article-swiper {
+    width: 100%;
+}
+
+.blog-page__box--article-slide {
+    position: relative;
+    border-radius: 5px;
+        min-height: 280px;
+    overflow: hidden;
+}
+
+.blog-page__box--article-slide-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    inset: 0;
+}
+
+.blog-page__box--article-slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-page__box--article-slide-content {
+    padding: 40px 30px;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+
+.blog-page__box--article-slide-content {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    gap: 24px;
+}
+
+.blog-page__box--article-slide-content h3 {
+    font-family: var(--heading-font);
+    font-size: var(--heading-general-size);
+    font-weight: 700;
+    line-height: normal;
+}
+
+.blog-page__box--article-slide-content p {
+    font-family: var(--text-font);
+    font-size: var(--text-general-size);
+    font-weight: 400;
+    max-width: 501px;
+    line-height: normal;
+}
+
+.blog-page__box--article-slider-pagination {
+    position: static;
+    margin-top: 16px;
+}
+
+.also-like {
+    padding: var(--section-padding-y) 0;
+}
+
+.also-like .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.blog-page__box--article-slider {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.materials__gallery {
+    width: 100%;
+    height: 345px;
+}
+
+.materials__gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
