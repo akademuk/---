@@ -574,6 +574,30 @@
         min-width: 100%;
         position: static;
     }
+
+    .services-article-page__hero-partnership .container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .services-article-page__hero-partnership .services-article-page__hero-content{
+        width: 100%;
+    }
+
+    .services-article-page__hero-partnerships {
+        width: 100%;
+    }
+
+    .services-article-page__hero-partnerships .services-article-page__hero-partnership-img img {
+        object-position: top;
+    }
+
+    .services-article-page__hero-partnerships .about__icon-animation {
+        right: 0;
+        left: auto;
+        bottom: -67px;
+        top: auto;
+    }
 }
 
 @media (max-width: 768px) {
