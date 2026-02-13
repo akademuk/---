@@ -62,7 +62,7 @@ body {
     font-size: var(--text-general-size);
     color: var(--color-text);
     background: var(--color-body);
-    overflow-x: hidden;
+    /* overflow-x: hidden; Removed to fix double scrollbar */
     position: relative;
     width: 100%;
     font-weight: 400;
@@ -106,12 +106,6 @@ body {
 
 .header--black .header__contact-btn img {
     filter: brightness(0) saturate(100%) invert(21%) sepia(1%) saturate(3415%) hue-rotate(337deg) brightness(95%) contrast(80%);
-}
-
-/*todo: лого должно меняться в админке, оформляем через div bacground-image: url("../img/icons/logo-black.png");*/
-
-.header--black .header__logo img {
-    content: url("../img/icons/logo-black.png");
 }
 
 .header__logo-img {
@@ -388,6 +382,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
+    background: #fff;
     transition: all 0.3s ease;
 }
 
@@ -6218,4 +6213,17 @@ body.no-scroll .header__action {
     font-size: var(--btn-font-size);
     font-weight: 500;
     line-height: normal;
+}
+
+.flex-column {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#primary.arto-main {
+    max-width: 100%;
+}
+
+.arto-products .product{
+    min-height: auto;
 }
