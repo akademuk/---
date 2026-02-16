@@ -2772,6 +2772,9 @@ body.no-scroll .header__action {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 2px;
+    background: #FEFDFD;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .team__slide-founder .team__figure {
@@ -2792,6 +2795,7 @@ body.no-scroll .header__action {
 }
 
 .team__name {
+    font-weight: 400;
     text-align: center;
     font-size: var(--heading-small-size);
     margin-bottom: 8px;
@@ -3046,6 +3050,7 @@ body.no-scroll .header__action {
     font-family: var(--text-font);
     font-size: var(--text-general-size);
     margin-bottom: 12px;
+    font-weight: 400;
 }
 
 .about-production__content-item p {
@@ -3481,6 +3486,7 @@ body.no-scroll .header__action {
 .cycle__item h3 {
     font-size: var(--text-general-size);
     margin-bottom: 12px;
+    font-weight: 400;
 }
 
 .cycle__item-description {
@@ -4080,7 +4086,7 @@ body.no-scroll .header__action {
 }
 
 .blog-page__box--article-gallery-img img {
-    max-width: 180px;
+    max-width: 178px;
     width: 100%;
     height: 270px;
     object-fit: cover;
