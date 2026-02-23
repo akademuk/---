@@ -598,6 +598,10 @@
         bottom: -67px;
         top: auto;
     }
+
+    .gift-sets-body .product {
+        max-width: calc(50% - 12px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1066,5 +1070,9 @@
 
     .contact-page__list-item {
         flex: 1 1 100%;
+    }
+
+    .gift-sets-body .product {
+        max-width: 100%;
     }
 }
