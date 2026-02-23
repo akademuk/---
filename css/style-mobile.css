@@ -4,6 +4,10 @@
         --section-padding-x: 32px;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     .header__search-form {
         display: none;
     }
