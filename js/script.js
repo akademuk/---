@@ -588,6 +588,42 @@ function initShopFilter() {
     }
 }
 
+/* ==========================================================================
+   Modal Popup
+   ========================================================================== */
+function initModal() {
+  const modal = document.getElementById('ctaModal');
+  if (!modal) return;
+
+  const openBtns = document.querySelectorAll('.btn-open');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  function openModal() {
+    modal.classList.add('is-active');
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-active');
+    document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close on overlay click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-active')) closeModal();
+  });
+}
+
 // Call scripts
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
@@ -607,4 +643,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFancybox();
   initShopFilter();
   initArticleSlider();
+  initModal();
 });

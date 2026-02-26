@@ -126,7 +126,7 @@
                             <span>Вигідна система знижок для партнерів</span>
                         </li>
                     </ul>
-                    <a href="/" class="btn btn-white services-article-page__hero-content-link">Дізнатись деталі</a>
+                    <button class="btn btn-white services-article-page__hero-content-link btn-open">Дізнатись деталі</button>
                 </div>
                 <div class="services-article-page__hero-gallery">
                     <div class="services-article-page__hero-gallery-flex">
@@ -206,7 +206,7 @@
                     <h2 class="heading-general font-heading">Форми співпраці</h2>
                     <div class="title-row__text">
                         <p>Lorem ipsum dolor sit amet consectetur. Vitae lacus neque amet sagittis consequat. Tempus ut condimentum feugiat quis cursus amet aliquet arcu.</p>
-                        <a href="/" class="btn-dark">Стати партнером</a>
+                        <button class="btn-dark btn-open">Стати партнером</button>
                     </div>
                 </div>
                 <div class="forms-of-cooperation-body">
@@ -593,6 +593,30 @@
                     <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакти</a></li>
                 </ul>
             </nav>
+        </div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="ctaModal">
+        <div class="modal-popup">
+            <button class="modal-close" type="button" aria-label="Закрити">&times;</button>
+            <div class="modal-popup__content">
+                <div class="cta-form__content">
+                    <h2 class="heading-general font-heading">Залишились питання?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur. Id non sapien nulla potenti malesuada in nunc ornare nam. Integer posuere iaculis turpis massa.</p>
+                </div>
+                <form action="" class="form">
+                    <label for="modal-name" class="form__label">
+                        Ваше ім'я*
+                        <input type="text" id="modal-name" name="name" placeholder="Як можна до вас звертатись?" class="form__input" required>
+                    </label>
+                    <label for="modal-tel" class="form__label">
+                        Номер телефону*
+                        <input type="tel" id="modal-tel" name="tel" placeholder="+380хх ххх хх хх" class="form__input" required>
+                    </label>
+                    <button type="submit" class="form__button btn btn-dark">Відправити контакти</button>
+                </form>
+            </div>
         </div>
     </div>
 
